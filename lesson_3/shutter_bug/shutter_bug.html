@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ShutterBug</title>
+  <style>
+  @import 'https://fonts.googleapis.com/css?family=Roboto+Condensed';
+  body * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #3e606f;
+    background: linear-gradient(135deg, #d6e0c5, #193441);
+    padding: 15px 30px;
+  }
+  header, main, footer {
+    margin: 0 auto;
+    width: 980px;
+    position: relative;
+    overflow: auto;
+  }
+  .logo {
+    float: left;
+    padding: 32px 0 0 0;
+  }
+  .camera {
+    padding: 15px;
+  }
+  nav {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    margin-right: 15px;
+  }
+  nav > a {
+    background-color: #fcfff5;
+    color: #91aa9d;
+    padding: 10px 42px;
+    border-radius: 10px 10px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    margin-right: 5px;
+  }
+  #current_tab {
+    background-color: #91aa9d;
+    color: #fcfff5;
+  }
+  main {
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px gray;
+  }
+  #beach_tree {
+    float:right;
+    padding-left: 30px;
+  }
+  footer {
+    font-size: .8rem;
+  }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1><img class="logo camera" src="camera_icon.png" alt="Shutter Bug Icon"></h1>
+    <h1 class="logo">Shutter Bug</h1>
+    <nav>
+      <a id="current_tab" href="shutter_bug.html">Home</a>
+      <a href="shutter_bug.html">Gallery</a>
+      <a href="shutter_bug.html">About</a>
+      <a href="shutter_bug.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <img src="marsh.jpg" alt="A crisp photograph of a marshy area." /><!--900px-->
+    <article>
+      <h1>Welcome to Shutter Bug</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac felis faucibus, pulvinar lectus euismod, vestibulum ex. Donec ut lobortis ex. Morbi vel risus ac diam consequat accumsan. Aliquam interdum congue dolor in ultrices. Aliquam libero lectus, vestibulum id purus eu, consectetur vestibulum diam. Mauris fringilla nulla quis elit molestie semper. Etiam egestas laoreet volutpat.</p>
+      <img src="beach_tree.jpg" alt="A black and white photo of a bare tree on a beach." id="beach_tree">
+      <p>Aliquam non elementum ex, facilisis malesuada quam. Nunc dui massa, auctor quis neque a, finibus sodales urna. Nulla euismod a ipsum eu sodales. Fusce aliquam consectetur lorem non laoreet. Pellentesque libero ante, dignissim ut facilisis sed, laoreet dictum turpis. Phasellus vitae turpis congue dui posuere sollicitudin. Suspendisse eu risus nec nisl faucibus mollis in a erat. Praesent et suscipit nulla. Morbi urna mauris, tristique et finibus vel, ultrices id velit. In semper, tortor a mollis lacinia, sem diam laoreet sapien, sit amet imperdiet mauris justo at ligula. Duis dapibus auctor ligula, lacinia dignissim arcu porta et. Pellentesque lobortis orci est, sed iaculis lacus laoreet nec.</p>
+      <p>Nam at velit a augue lacinia pretium eu ut arcu. Nam eu orci eu leo faucibus facilisis. Vestibulum pharetra dignissim leo, ultrices hendrerit odio egestas in. Morbi et lectus a risus congue tristique non quis erat. Nam tincidunt aliquet elit quis commodo. Suspendisse vestibulum lacinia mi. Vivamus convallis vel leo lacinia tempus. Fusce sed iaculis arcu. In hac habitasse platea dictumst. Morbi vitae metus vehicula, bibendum enim vitae, commodo massa. Vestibulum ut sem in urna elementum sagittis. Donec metus urna, auctor scelerisque orci quis, eleifend faucibus urna. Cras at auctor turpis, vel viverra dolor. Donec blandit nibh mauris, ac laoreet lectus dignissim vitae. Nunc eros neque, ultricies at fermentum nec, molestie eu dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2015 Shutter Bug</p>
+  </footer>
+
+</body>
+</html>

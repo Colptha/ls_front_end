@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Floats</title>
+  <style>
+  body { background: #e0e0e0;
+          font-family: sans-serif;}
+#column {
+  margin: 0 220px 0 0;
+}
+#primary, #secondary {
+  background: yellow;
+  padding: 25px;
+  box-sizing: border-box;
+}
+#primary {
+  float: left;
+  width: 100%;
+}
+
+#secondary {
+  float: right;
+  margin: 0 -220px 0 0;
+  width: 200px;
+}
+  </style>
+</head>
+<body>
+   <div id="column">
+    <div id="primary">
+      <h1>Main Content</h1>
+    </div>
+
+    <div id="secondary">
+      <h3>Sidebar Content</h3>
+    </div>
+   </div>
+</body>
+</html>

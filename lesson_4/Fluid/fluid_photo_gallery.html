@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Photo Gallery</title>
+		<style>
+		body {
+			line-height: 1.5rem;
+			text-align: center;
+			background: #000;
+			margin: 0 auto 25px auto;
+			font-family: Helvetica, Arial, sans-serif;
+			color: #fff;
+		}
+		main {
+			max-width: 1000px;
+			min-width: 600px;
+			background: #333;
+			padding: 20px;
+			box-sizing: border-box;
+			margin: 0 auto;
+		}
+		figure {
+			margin: 0;
+		}
+		figure img {
+			width: 100%;
+			box-sizing: border-box;
+			padding: 15px;
+			background: #fff;
+		}
+		figcaption {
+			text-align: left;
+		}
+		div.photos {
+			box-sizing: border-box;
+		}
+		ul {
+			padding: 0;
+			margin: 0;
+			margin-right: -15px;
+			margin-left: -15px;
+		}
+		ul li {
+			display: inline-block;
+			width: 25%;
+			box-sizing: border-box;
+			padding: 15px;
+		}
+		ul li img {
+			box-sizing: border-box;
+			width: 100%;
+			padding: 3px;
+			background: #fff;
+		}
+		</style>
+	</head>
+	<body>
+		<main>
+			<h1>My Photo Gallery</h1>
+			<figure>
+				<img src="../1200x900.png" alt="Dummy Photo" />
+				<figcaption>
+					Example Photo
+				</figcaption>
+			</figure>
+			<ul>
+				<li><img src="../1200x900.png" alt="Dummy Photo" /></li><!--
+				--><li><img src="../1200x900.png" alt="Dummy Photo" /></li><!--
+				--><li><img src="../1200x900.png" alt="Dummy Photo" /></li><!--
+				--><li><img src="../1200x900.png" alt="Dummy Photo" /></li>
+			</ul>
+		</main>
+	</body>
+</html>

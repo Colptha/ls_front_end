@@ -1,0 +1,87 @@
+@import url("../../whitespace_reset.css");
+html, body {
+	font: normal 16px Helvetica, Arial, sans-serif;
+	color: #1c242f;
+	background: #ffd505;
+	margin: 0 auto;
+	width: 900px;
+}
+
+header {
+	padding: 30px 25px;
+	margin-bottom: 30px;
+	border-radius: 0 0 16px 16px;
+	background: #047ec1;
+}
+
+header h1 {
+	display: block;
+	font-size: 2.4em;
+	color: #fff;
+}
+
+
+main {
+	padding: 25px;
+	background: #ececec;
+}
+
+main:after {
+	clear: both;
+	display: block;
+	content: "";
+}
+
+main h2{
+	padding: 0 0 25px 0;
+	font-size: 2em;
+}
+
+li {
+	float: left;
+	width: 23.5%;
+	margin: 0 0 2% 2%;
+	background: #fff;
+	padding: 15px;
+	box-sizing: border-box;
+}
+
+li:nth-of-type(4n+1) {
+	margin-left: 0;
+}
+
+h3 {
+	padding: 0 0 5px 0;
+	font-size: 1.2em;
+}
+
+figure {
+	width: 100%;
+	height: 160px;
+}
+
+img {
+	display: block;
+	width: auto;
+	height: 140px;
+	margin: 0 auto;
+}
+
+input[type="checkbox"] {display: none;}
+input:checked + figure img {
+	position: absolute;
+	right: 33%;
+	left: 33%;
+	top: 33%;
+	height: auto;
+}
+input:checked + figure:before {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	content: "";
+	background: rgba(0, 0, 0, .4)
+}

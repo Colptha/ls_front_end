@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Liquid Layout</title>
+		<style>
+		main {/*The addition of these minimum and maximum changes this from a
+			liquid to a fluid layout. Generally a liquid layout adjusts to the
+			browser window size while a fluid layout adjusts up to certain points*/
+			min-width: 600px;
+			max-width: 1400px;
+		}
+		.content,
+		.sidebar {
+			padding: 20px 30px;
+		}
+		.content {
+  	width: 70%;
+		box-sizing: border-box;
+		float: left;
+		}
+
+		.sidebar {
+			overflow: hidden;
+		}
+		</style>
+	</head>
+	<body>
+		<main>
+			<div class="content">
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt turpis magna, vel venenatis sem molestie id. Duis rutrum pretium aliquam. Donec eget libero efficitur est finibus commodo eu eget arcu. Suspendisse egestas volutpat sodales. Vivamus pellentesque, tortor ut dapibus dictum, libero felis varius turpis, vel condimentum purus diam a turpis. Donec purus tellus, consequat ac mollis vitae, faucibus eu nibh. Fusce ullamcorper enim non ante dignissim semper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam dolor nulla, volutpat vel odio in, viverra rhoncus turpis.
+
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam commodo ipsum ac libero ultricies, non rutrum arcu efficitur. Fusce maximus nec erat nec semper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus nec nibh lobortis, sagittis nisi a, sagittis nibh. In vel sagittis ex. In dictum est velit, ac egestas eros aliquet sit amet. Vestibulum id egestas massa. Integer vel volutpat nibh, eget porttitor velit. Aliquam ut malesuada augue. Vestibulum a mauris metus. Nunc eleifend vestibulum velit eu rutrum.
+
+Proin sit amet felis vel dui lobortis pretium. Duis pharetra augue a iaculis iaculis. Sed gravida tellus eget nulla elementum pretium. Suspendisse potenti. Integer vitae tortor a est sollicitudin tempus. Sed finibus nibh laoreet maximus volutpat. Donec aliquet euismod felis, vitae congue nisi auctor sed. Sed at laoreet nunc. Duis iaculis commodo magna nec lacinia. Phasellus viverra laoreet erat eget pretium. Donec sagittis auctor fringilla. Nam velit risus, varius eget est eu, mattis tempus est. Praesent vitae sapien laoreet, porttitor magna at, feugiat nisi. Donec quis diam malesuada, volutpat urna in, interdum ipsum. Vivamus ornare efficitur eros.
+</div>
+<div class="sidebar">
+
+Cras placerat in odio vitae condimentum. Donec quis feugiat leo. Etiam nec luctus mi, id efficitur elit. Etiam vehicula gravida lectus in posuere. Pellentesque blandit congue nisi a viverra. Sed a ante in elit tempor pretium. Pellentesque velit libero, sollicitudin eget tellus vel, rutrum fringilla dolor. Donec ac odio purus. Integer condimentum viverra mollis. Aenean id ante ante.
+
+Nunc sed turpis quis ipsum blandit facilisis. Aenean venenatis lacus aliquet orci aliquet volutpat. Nulla at elit nisl. Donec volutpat tempus turpis, vitae interdum mi tincidunt id. Phasellus cursus sollicitudin lorem ac faucibus. Phasellus et lacus consectetur, malesuada lorem vitae, ultrices urna. Maecenas sit amet euismod diam.
+</div>
+</main>
+</body>
+</html>

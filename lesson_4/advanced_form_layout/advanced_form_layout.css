@@ -1,0 +1,122 @@
+body {
+  font: normal 16px Helvetica, Arial, sans-serif;
+  color: #282828;
+  background-color: white;
+  margin: 0;
+}
+
+form {
+  width: 600px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+h1,
+h2 {
+  color: black;
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: normal;
+  padding-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  padding-bottom: 1.2rem;
+}
+
+fieldset {
+  padding: 1.5rem 2rem;
+  background-color: #ececec;
+  border: none;
+  border-left: 4px solid #ccc;
+  margin: 0;
+  margin-bottom: 2px;
+}
+
+dl {
+  margin: 0;
+}
+
+dt, dd {
+  margin: 0;
+}
+dd {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  color: #666;
+  padding-bottom: .62rem;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+textarea {
+  height: 2.5rem;
+  width: 100%;
+  display: inline-block;
+  border: 1px solid #06c;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font: normal .85rem Helvetica, Arial, sans-serif;
+  padding: .75rem .5rem;
+}
+textarea {
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+label.checkbox {
+  position: relative;
+  padding: 0 0 1.5rem 1.25rem;
+  font-size: .875rem;
+  font-weight: normal;
+}
+input[type="checkbox"] {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  margin: 0;
+}
+input[type="submit"] {
+  font: normal 1rem Helvetica, Arial, sans-serif;
+  background-color: #06c;
+  padding: .875rem 2rem;
+  border-radius: 4px;
+  color: #fff;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+}
+input[type="submit"]:hover {
+  background-color: #5f95cc;
+}
+.partial {
+  display: inline-block;
+}
+.half {
+  width: 48%;
+  margin-right: 4%;
+}
+.third {
+  width: 32%;
+  margin-right: 2%;
+}
+.last {
+  margin-right: 0;
+}
+#first_name,
+#last_name {
+  width: 49%;
+}
+#last_name {
+  margin-left: 2%;
+}

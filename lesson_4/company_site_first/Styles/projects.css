@@ -1,0 +1,23 @@
+@import url("space_design.css");
+
+/*
+------------------------------------------
+MAIN
+------------------------------------------
+*/
+main {
+	padding: 125px 0 17px 0;
+}
+h2 {
+	margin-bottom: 46px;
+}
+figure {
+	margin-bottom: 49px;
+}
+img {
+	width: 100%;
+}
+p {
+	width: 769px;
+	margin-bottom: 117px;
+}

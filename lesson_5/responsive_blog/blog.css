@@ -1,0 +1,147 @@
+@import url("../../normalize.css");
+@import url("../../whitespace_reset.css");
+
+body {
+	font: normal 20px Helvetica, Arial, sans-serif;
+}
+main, footer {
+	max-width: 1000px;
+	box-sizing: border-box;
+	margin: 0 auto;
+}
+/*
+**************************************************
+HEADER
+**************************************************
+*/
+
+body > header {
+	color: #fff;
+	padding: 150px 0 45px 0;
+	text-align: center;
+	background: #444;
+
+}
+
+header h1 {
+	display: inline-block;
+	font-size: 5rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: .5rem;
+	padding-bottom: 250px;
+	background: transparent url("images/logo.png") 0 125px no-repeat;
+}
+
+header ul {
+	list-style: none;
+}
+
+header li {
+	display: inline-block;
+	padding: 0 20px;
+}
+
+header li a {
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+}
+header li a.active {
+	color: #00ffcc;
+}
+/*
+**************************************************
+MAIN
+**************************************************
+*/
+main {
+	background: #fff;
+	color: #444;
+	text-align: left;
+	max-width: 1000px;
+	line-height: 150%;
+	padding-bottom: 75px;
+}
+
+main,
+main div.content,
+main div.sidebar {
+overflow: hidden;
+}
+
+main div.content {
+	width: 65%;
+	padding: 0 11.5% 0 0;
+	float: left;
+}
+
+main div.sidebar {
+	font-size: .85rem;
+	margin-top: 80px;
+	padding: 30px;
+	background: #f4f4f4;
+	color: #666;
+}
+main div.sidebar h3 {
+	color: #444;
+	font-size: 1rem;
+	text-transform: uppercase;
+}
+main div.sidebar ul {
+	margin: 0 0 100px 0;
+}
+main div.sidebar li {
+	display: block;
+	height: 1.5rem;
+	padding-left: 18px;
+	background: transparent url("images/blt_ul.png") 0 8px no-repeat;
+}
+main div.sidebar li a {
+	text-decoration: none;
+	color: #666;
+}
+
+main article {
+	margin: 5rem 0;
+}
+
+main article header h2 {
+	font-size: 2.4rem;
+}
+
+main article header h2 + p {
+	margin: 1.5rem 0 1.2rem 0;
+}
+main article header a {
+	color: #88eecc;
+	text-decoration: none;
+}
+main nav ul li {
+	display: inline-block;
+	margin: 0 25px 0 0;
+}
+main div.content nav ul li a {
+	display: block;
+	line-height: 1.2rem;
+	font-size: .8rem;
+	text-decoration: none;
+	padding: 3px 22px;
+	border-radius: 15px;
+	background: #6fc;
+	color: #fff;
+}
+main div.content nav ul li a.disabled {
+	background: #ccc;
+}
+/*
+**************************************************
+FOOTER
+**************************************************
+*/
+footer {
+	font-size: .75rem;
+	color: #999;
+	padding: 20px 0;
+	border-top: 1px solid #999;
+}

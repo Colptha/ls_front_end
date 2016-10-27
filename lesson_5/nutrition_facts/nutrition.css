@@ -1,0 +1,149 @@
+html {
+	font: normal 28px Helvetica, Arial, sans-serif;
+}
+
+body {
+	width: 680px;
+	box-sizing: border-box;
+	margin: 8px;
+	border: 2px solid black;
+	background: #fff;
+}
+
+h1 {
+	margin: 0;
+}
+
+h2 {
+	font-size: 1rem;
+	padding: 10px 0;
+	margin: 0;
+}
+
+h2:first-of-type {
+	border-bottom: 1px solid black;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+dl {
+	margin: 0;
+	text-align: left;
+}
+
+dd {
+	font-weight: normal;
+}
+
+th, td {
+	padding: 2px 0;
+}
+
+sup {
+	vertical-align: 3px;
+}
+
+/*******************************/
+/*******************************/
+
+header {
+	margin: 10px 15px 0 15px;
+	border-bottom: 30px solid black;
+	padding-bottom: 5px;
+}
+
+header p {
+	margin: 0;
+}
+
+/*******************************/
+/*******************************/
+
+main {
+	padding: 0 15px 10px 15px;
+}
+
+main dl + h2 {
+	text-align: right;
+	border-top: 15px solid black;
+	padding-bottom: 1px;
+}
+
+main > dl {
+	display: inline-block;
+	width: 50%;
+	margin: 0;
+	padding: 5px 0;
+}
+
+main > dl:nth-of-type(2) {
+	text-align: right;
+}
+
+main > dl:nth-of-type(2) dt {
+	font-weight: normal;
+}
+
+main dt {
+	font-weight: bold;
+	display: inline-block;
+	margin: 0;
+}
+
+main dd {
+	display: inline-block;
+	margin: 0;
+}
+
+.indent {
+	width: 1rem;
+	border-top: none;
+}
+
+td dt {
+	font-weight: normal;
+}
+
+main tr {
+	padding: 2px 0;
+}
+
+tbody th,
+tbody td {
+		border-top: 1px solid black;
+}
+
+tbody td:last-of-type {
+	text-align: right;
+}
+
+tbody:first-of-type td:last-of-type {
+	font-weight: bold;
+}
+
+table:first-of-type tbody:first-of-type tr:last-of-type {
+	border-bottom: 20px solid black;
+}
+
+tfoot td {
+	text-align: left;
+	font-size: 25.2px;
+	padding: .5rem 0 .5rem .7rem;
+	text-indent: -.7rem;
+}
+
+table:last-of-type th,
+table:last-of-type td,
+table:last-of-type tbody td:last-of-type {
+	border: none;
+	font-weight: normal;
+	text-align: left;
+	font-size: .8rem;
+}
+
+table:last-of-type thead {
+	border-bottom: 1px solid black;
+}

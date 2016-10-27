@@ -1,0 +1,106 @@
+@import url("../../../normalize.css");
+@import url("../../../whitespace_reset.css");
+/*
+------------------------------------------
+BODY
+------------------------------------------
+*/
+body {
+	font: normal 20px Helvetica, Arial, sans-serif;
+	line-height: 1rem;
+	color: #45494d;
+	max-width: 1200px;
+	margin: 0 auto;
+	background: #2f2840 url(../images/bg_body.gif) 50% 0;
+}
+p {
+	line-height: 28px;
+	margin: 0 auto;
+}
+/*
+------------------------------------------
+HEADER
+------------------------------------------
+*/
+header {
+	padding-top: 135px;
+	text-align: center;
+}
+header h1 {
+	padding-bottom: 127px;
+}
+header nav a {
+	display: inline-block;
+	font-size: 26px;
+	font-weight: 200;
+	text-transform: uppercase;
+	color: #cacaca;
+	text-decoration: none;
+	padding: 0 44px 50px 44px;
+}
+#current_page_nav{
+	color: #6db9ff;
+	font-weight: 500;
+}
+/*
+------------------------------------------
+MAIN
+------------------------------------------
+*/
+main {
+	background-color: #fff;
+	text-align: center;
+}
+article,
+aside {
+	margin: 0 auto;
+}
+figure {
+	text-align: center;
+}
+h2 {
+	font-size: 36px;
+	font-weight: 400;
+	line-height: 28px;
+	margin-bottom: 46px;
+}
+h3 {
+	font-size: 24px;
+	color: #3e59b2;
+	margin-bottom: 26px;
+	font-weight: 500;
+}
+/*
+------------------------------------------
+FOOTER
+------------------------------------------
+*/
+footer {
+	color: #b2b2b2;
+	height: 300px;
+	padding-top: 87px;
+	background-color: #e7e7e7;
+	text-align: center;
+	box-sizing: border-box;
+}
+footer p {
+	width: 500px;
+	margin-bottom: 39px;
+}
+footer a {
+	display: inline-block;
+	background: transparent url(../images/icons_social-media.png) 0 0 no-repeat;
+	height: 46px;
+	width: 46px;
+	text-indent: -5000px;
+	margin: 0 62px;
+}
+.facebook {
+	background-position: 0 33.3%;
+}
+.email {
+	background-position: 0 66.7%;
+}
+.instagram {
+	background-position: 0 100%;
+}

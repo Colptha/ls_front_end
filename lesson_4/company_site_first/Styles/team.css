@@ -1,0 +1,26 @@
+@import url("space_design.css");
+
+/*
+------------------------------------------
+MAIN
+------------------------------------------
+*/
+main {
+	padding: 125px 0 230px 0;
+}
+p {
+	width: 726px;
+	margin-bottom: 125px;
+}
+main img {
+	display: block;
+	margin-bottom: 33px;
+}
+figure {
+	display: inline-block;
+	margin: 0 30px;
+}
+main a {
+	color: #3e59b2;
+	text-decoration: none;
+}

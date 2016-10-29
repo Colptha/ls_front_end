@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Notes</title>
+		<style>
+		body {
+			font: normal 14px sans-serif;
+			padding: 10%;
+		}
+		code {
+			margin-left: 15px;
+		}
+		.test {
+			height: 10px;
+			background: yellow;
+		}
+		.container {
+			background: red;
+		}
+		.break {
+			height: 200px;
+			background: #ddd;
+		}
+		.float {
+			float: right;
+			height: 150px;
+			width: 150px;
+			background: #00dddd;
+			border: 1px solid gray;
+		}
+		div.float p {
+			border-top: 1px solid black;
+		}
+		.left {
+			float: left;
+		}
+		.height1 {
+			height: 10px;
+		}
+		.overflow {
+			overflow: hidden;
+		}
+		.height2 {
+			height: 150px;
+		}
+		.clear {
+			clear: both;
+		}
+		.padding {
+			padding: 60px;
+		}
+		span {
+			display: inline-block;
+			background: #99f;
+		}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>HTML/CSS</h1>
+		</header>
+		<article>
+			<h2>Floats</h2>
+			<p>An element may be floated using the following:<br><code>float: left;</code><br><code>float: right;</code></p>
+			<p>Things to know:</p>
+			<ol>
+				<li>It respects the flow in the following ways</li>
+					<ol>
+						<li>It is still restricted by its parent container.</li>
+						<li>It interacts with sibling elements though sometimes in seemingly unusual ways until you understand how it's being treated.</li>
+						<li>It will sit below a sibling block element which is rendered before it (assuming that element is in the normal flow).</li>
+						<li>Sibling block elements rendered after the float will slide behind it (though their inline descendants will not move behind the float, they will wrap around it.)</li>
+					</ol>
+				<li>It disrupts normal flow in the following ways.</li>
+					<ol>
+						<li>It's contents are moved to the right or left of its parent element.</li>
+						<li>Block level elements rendered after it will render <em>behind</em> the floated contents</li>
+						<li>Margin and padding are no longer attributed to the floated element itself, but only to its contents.</li>
+						<li>It leaves no height or width in the position where it would have rendered. As a consequence of this:</li>
+							<ol>
+								<li>If it is the only element in the parent container, and the parent container does not have a fixed height, then the parent container will have no height, and not be visible (unless it's overflow is set to hidden or auto). This is why background colors do not render for example.</li>
+								<li>Any block level elements rendered after it in the same container will render after its 0px height(if set to clear then after its floated content). From a display perspective, it would then seem that this element is rendered in the floating elements place, though really it is more like being rendered after an element with zero height. I say this because the floating element still maintains that spot in the flow by being restricted by the previous block element or, lacking that, the parent container.</li>
+							</ol>
+					</ol>
+			</ol>
+			<p>A conceptual model to summarize floats is to say that it is not the element itself which is floated, but rather its contents. The element with float applied to it is rendered as a block with zero height (but margin and padding are not applied to the element, but to its contents..) and its contents are moved to the left or right of the parent container(or of the block level element, since it traverses across the entire parent. Check if parent container padding affect it to verify this model). They necessarily overflow the boundaries of the element (with zero height) because they take up space. (this is why setting the overflow "clears" the floated element. The element is resizing to not let its contents overflow. When it resizes it pushes things below it down "clearing" them, because it now has a height. This is the same reason you can see its background color. There is now a background to be colored.)</p>
+
+			<p>Or, even shorter, a floated element is rendered as a block. It's contents are no longer contributors to its height. It's contents are treated like an inline-block element which allows block elements to render <em>behind</em> them but forces inline elements to wrap around them.</p>
+			<h2>Some examples</h2>
+			<div class="container">
+				<div class="float">
+					<p>My parent container has no height! But it's still there.</p>
+				</div>
+			</div>
+
+			<div class="break">I am rendered after the parent container which contains the floated element. I actually render BEHIND the floated CONTENT but below the block level container for the content. The content is just overflowing the container. The content itself is treated as a block element inasfar as it receives padding and margin, but is treated as an inline element inasfar as it does not necessarily take up the whole width of its parent container. Notice though that my inline text still wraps around the floated content, even though the inline text's container is rendering BEHIND the content.
+			</div>
+
+			<div class="container height1">
+				<div class="float">
+					<p>My parent container has a fixed height of 10px. Now you can see it. But it's height still isn't determined by it's floated content.</p>
+				</div>
+			</div>
+
+			<div class="break">I am rendered after the parent container which contains the floated element. I actually render BEHIND the floated CONTENT but below the block level container for the content. The content is just overflowing the container. The content itself is treated as a block element inasfar as it receives padding and margin, but is treated as an inline element inasfar as it does not necessarily take up the whole width of its parent container. Notice though that my inline text still wraps around the floated content, even though the inline text's container is rendering BEHIND the content.
+			</div>
+
+			<div class="container padding">I have 60px of padding all around. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+				<div class="float">
+					<p>The block level floated element renders at the right side inbetween its parents padding and after the content before it.</p>
+				</div>
+			</div>
+
+			<div class="break">I am rendered after the parent container which contains the floated element. I actually render BEHIND the floated CONTENT but below the block level container for the content. The content is just overflowing the container. The content itself is treated as a block element inasfar as it receives padding and margin, but is treated as an inline element inasfar as it does not necessarily take up the whole width of its parent container. Notice though that my inline text still wraps around the floated content, even though the inline text's container is rendering BEHIND the content.
+			</div>
+
+			<div class="container overflow">
+				<div class="float">
+					<p>Now my parent container will be as tall as it needs to be in order to not allow the float to overflow it. This fixes the 'float' problem we run often run into.</p>
+				</div>
+			</div>
+
+			<div class="break">I am rendered after the parent container which contains the floated element. I actually render BEHIND the floated CONTENT but below the block level container for the content. The content is just overflowing the container. The content itself is treated as a block element inasfar as it receives padding and margin, but is treated as an inline element inasfar as it does not necessarily take up the whole width of its parent container. Notice though that my inline text still wraps around the floated content, even though the inline text's container is rendering BEHIND the content.
+			</div>
+
+			<div class="container height2">
+				<div class="float">
+					Here, my parent container has had its height manually set (as opposed to using overflow) to the same height as the floated content.
+				</div>
+			</div>
+
+			<div class="break">
+			</div>
+
+			<div class="container">
+				<div class="float padding">
+					<p>In this instance, the parent container is a height of 0 with no background showing. Padding applied to the floated element shows up on the floated contents, not the element itself! Or else you would see the elements background color.</p>
+				</div>
+			</div>
+
+			<div class="break clear">But I am set to clear the floated content. If you use the dev tools to inspect just above me in the white space, you will be brought to the article, not the floated element. The space is empty!
+			</div>
+			<p></p>
+
+			<div class="container">
+				<p>Paragraph block</p>
+				<div class="float">
+					<p>3rd</p>
+					<div class="float">
+						<p>2nd</p>
+						<div class="float">
+							<p>innermost, rendered underneath the float below in a different parent container</p>
+						</div>
+					</div>
+				</div>
+				<div class="float">
+					<div class="float">
+						<div class="float">
+							<div class="float">
+								innermost of 4, looks like one.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="break">
+				</div>
+				<div class="float">I rendered 1st
+				</div>
+				<p>I rendered 2nd (paragraph block)</p>
+				<div class="float">but its inline text still wraps between us
+				</div>
+				<div class="float left">paragraph block renders behind me
+				</div>
+					<p style="border-top: 3px solid black;">P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k <span>Span rendering as an inline-block also wraps</span> P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k P a r a g r a p h b l o c k </p>
+		</div>
+
+		<div class="container">
+			<div class="float">
+			</div>
+		</div>
+		<div class="container">
+			<div class="float">
+			</div>
+		</div>
+		<div><p>.</p></div>
+		<div>.</div>
+		<div class="container">
+			<div class="float">
+			</div>
+		</div>
+		<div class="container">
+			<div class="float">
+			</div>
+		</div>
+
+		<div class="container clear">
+			<p>Paragraph block</p>
+			<div class="float">
+				<p>3rd</p>
+				<div class="float">
+					<p>2nd</p>
+					<div class="float">
+						<p>innermost, rendered underneath the float below in a different parent container</p>
+					</div>
+				</div>
+			</div>
+			<div class="float">
+				<div class="float">
+					<div class="float">
+						<div class="float">
+							innermost of 4, looks like one.
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="break">
+			</div>
+			<div class="float">I rendered 1st
+			</div>
+		</div>
+
+		<div class="test">
+		</div>
+		<div class="float">
+		</div>
+		<div class="test">
+		</div>
+		<div class="float">
+		</div>
+		<div class="test">
+		</div>
+		<div class="float">
+		</div>
+		<div class="test">
+		</div>
+		<div class="float">
+		</div>
+		<div class="test">
+		</div>
+		<div class="float">
+		</div>
+		<div class="test">
+		</div>
+		<div class="float">
+		</div>
+		<div class="test">
+		</div>
+		<div class="float">
+		</div>
+		<div class="test">
+		</div>
+		<div class="float">
+		</div>
+
+
+	</body>
+</html>

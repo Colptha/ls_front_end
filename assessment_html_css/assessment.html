@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>To Do</title>
+		<link rel="stylesheet" href="assets/assessment.css" />
+	</head>
+	<body>
+		<input type="checkbox" id="toggle_header" />
+		<label for="toggle_header">
+			<img src="assets/menu_icon.png" alt="Menu" />
+		</label>
+		<header>
+			<nav>
+				<dl>
+					<dt>
+						<a href="#">All Todos</a>
+					</dt><!--
+					--><dd>
+						<a href="#">18</a>
+					</dd>
+					<dt class="active">
+						<a href="#">02/16</a>
+					</dt><!--
+					--><dd class="active">
+						<a href="#">8</a>
+					</dd>
+					<dt>
+						<a href="#">03/16</a>
+					</dt><!--
+					--><dd>
+						<a href="#">2</a>
+					</dd>
+					<dt>
+						<a href="#">04/16</a>
+					</dt><!--
+					--><dd>
+						<a href="#">1</a>
+					</dd>
+					<dt>
+						<a href="#">05/16</a>
+					</dt><!--
+					--><dd>
+						<a href="#">1</a>
+					</dd>
+					<dt>
+						<a href="#">06/16</a>
+					</dt><!--
+					--><dd>
+						<a href="#">6</a>
+					</dd>
+				</dl>
+			</nav>
+			<nav>
+				<ul>
+					<li>
+						<a href="#">Completed</a>
+					</li>
+					<li>
+						<a href="#">02/15</a>
+					</li>
+					<li>
+						<a href="#">03/15</a>
+					</li>
+					<li>
+						<a href="#">04/15</a>
+					</li>
+					<li>
+						<a href="#">05/15</a>
+					</li>
+					<li>
+						<a href="#">06/14</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+
+		<div class="container">
+			<main>
+
+
+			<header>
+				<dl>
+					<dt>02/16</dt>
+					<dd>8</dd>
+				</dl>
+			</header>
+
+			<table>
+				<thead>
+					<tr>
+						<th>
+							<img src="assets/new_task_icon.png" alt="New Task" />
+						</th>
+						<th colspan="2">
+							<a href="#">Add new to do</a>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<img src="assets/checkbox.png" alt="Checkbox" />
+						</td>
+						<td>
+
+							<!-- MODAL -->
+
+							<input type="checkbox" id="item_1">
+							<label for="item_1">Item 1</label>
+							
+							<div class="modal">
+									<form>
+
+										<dl>
+											<dt><label for="title">Title</label></dt><!--
+											--><dd><input type="text" id="title" placeholder="Item 2" />
+											<dt><label for="due">Due Date</label></dt><!--
+											--><dd>
+											<div class="stretch">
+													<div class="due">
+														<select id="due">
+															<option>Day</option>
+															<option selected>16</option>
+														</select>
+														<p>/</p>
+													</div><!--
+													--><div class="due">
+														<select>
+															<option>Month</option>
+															<option>January</option>
+														</select>
+														<p>/</p>
+													</div><!--
+													--><div class="due last">
+														<select>
+															<option value="Year">Year</option>
+															<option>2016</option>
+														</select>
+													</div>
+												</div>
+													</dd>
+											<dt><label for="description">Description</label></dt><!--
+											--><dd><textarea id="description" placeholder="Description"></textarea></dd>
+										</dl>
+
+
+											<input type="submit" value="Save" />
+											<input type="submit" value="Mark As Complete" />
+
+									</form>
+								</div>
+							
+
+									<!-- MODAL -->
+
+
+
+
+						</td>
+						<td>
+							<img src="assets/trash_bin.png"  alt="Delete Task" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img src="assets/checkbox.png" alt="Checkbox" />
+						</td>
+						<td>
+							<input type="checkbox" id="item_2">
+							<label for="item_2">Item 2</label>
+						</td>
+						<td>
+							<img src="assets/trash_bin.png"  alt="Delete Task" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img src="assets/checkbox.png" alt="Checkbox" />
+						</td>
+						<td>
+							<input type="checkbox" id="item_3" checked />
+							<label for="item_3">Item 3</label>
+						</td>
+						<td>
+							<img src="assets/trash_bin.png"  alt="Delete Task" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img src="assets/checkbox.png" alt="Checkbox" />
+						</td>
+						<td>
+							<input type="checkbox" id="item_4" checked disabled />
+							<label for="item_4">Item 4</label>
+						</td>
+						<td>
+							<img src="assets/trash_bin.png"  alt="Delete Task" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img src="assets/checkbox.png" alt="Checkbox" />
+						</td>
+						<td>
+							<input type="checkbox" id="item_5" checked disabled />
+							<label for="item_5">Item 5</label>
+						</td>
+						<td>
+							<img src="assets/trash_bin.png"  alt="Delete Task" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img src="assets/checkbox.png" alt="Checkbox" />
+						</td>
+						<td>
+							<input type="checkbox" id="item_6" />
+							<label for="item_6">Item 6</label>
+						</td>
+						<td>
+							<img src="assets/trash_bin.png"  alt="Delete Task" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img src="assets/checkbox.png" alt="Checkbox" />
+						</td>
+						<td>
+							<input type="checkbox" id="item_7" />
+							<label for="item_7">Item 7</label>
+						</td>
+						<td>
+							<img src="assets/trash_bin.png"  alt="Delete Task" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img src="assets/checkbox.png" alt="Checkbox" />
+						</td>
+						<td>
+							<input type="checkbox" id="item_8" />
+							<label for="item_8">Item 8</label>
+						</td>
+						<td>
+							<img src="assets/trash_bin.png" alt="Delete Task" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<img src="assets/checkbox.png" alt="Checkbox" />
+						</td>
+						<td>
+							<input type="checkbox" id="item_9" />
+							<label for="item_9">Item 9</label>
+						</td>
+						<td>
+							<img src="assets/trash_bin.png" alt="Delete Task" />
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</main>
+	</div>
+
+	</body>
+</html>

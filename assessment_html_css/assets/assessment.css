@@ -1,0 +1,314 @@
+@import url("whitespace_reset.css");
+html {font: normal 16px Helvetica, Arial, sans-serif;}
+body {color: #050505;}
+a {text-decoration: none;}
+
+/*
+******************************
+hamburger toggle
+******************************
+*/
+body > label {
+	position: absolute;
+	top: 23px;
+	left: 20px;
+	padding: 0 0 1px 12px;
+}
+body > input {
+	display: none;
+}
+/*
+******************************
+header
+******************************
+*/
+
+body > header {
+	float: left;
+	width: 335px;
+	padding: 71px 0 0 0;
+	background: #464f77;
+	height: 100vh;
+}
+header nav {
+	margin-bottom: 50px;
+}
+nav dl {
+	background: transparent url("to_do_icon.png") 102px 5px no-repeat;
+}
+
+nav dt,
+nav ul {
+	padding: 0 0 0 137px;
+}
+nav dt,
+nav dd,
+nav ul li a {
+	line-height: 40px;
+}
+nav dt {
+	display: inline-block;
+	width: 82px;
+}
+
+nav dd {
+	display: inline-block;
+	text-align: right;
+	padding: 0 32px 0 0;
+	width: 84px;
+}
+
+nav dl dt:first-of-type a {
+	font-size: 18px;
+	color: #fff;
+}
+
+nav dt.active,
+nav dd.active {
+	background: #383f5f;
+}
+dt.active a,
+dd.active a {
+	color: #fff;
+}
+dd.active a {
+	background: #148fd5;
+}
+nav dd a {
+	color: #cccccc;
+	font-size: 14px;
+	background: #6b7292;
+	padding: 1px 5px;
+	border-radius: 13px;
+}
+
+nav a {
+	color: #b2b5c3;
+}
+nav ul {
+	background: transparent url("completed_icon.png") 102px 7px no-repeat;
+}
+
+nav ul a {
+	text-decoration: line-through;
+}
+
+nav ul li:first-of-type a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 18px;
+}
+/*
+******************************
+modal
+******************************
+*/
+body div.container main div.modal label {
+	color: #050505;
+}
+input,
+textarea,
+select {
+	font: normal 16px Helvetica, Arial, sans-serif;
+	padding: 10px;
+}
+select {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	border-radius: 0;
+}
+input[type="text"] {
+	width: 100%;
+}
+div.modal {
+	width: 575px;
+	height: 400px;
+	position: absolute;
+	left: -9999px;
+	background: #fff;
+	border: 1px solid black;
+}
+div.modal form {
+	padding: 37px 38px 0 30px;
+}
+div.modal form dt,
+div.modal form dd {
+	display: inline-block;
+	margin-bottom: 15px;
+}
+div.modal form dd:last-of-type {
+	margin-bottom: 0;
+}
+div.modal form dt {
+	width: 105px;
+	vertical-align: top;
+}
+div.modal form dd {
+	width: 400px;
+}
+div.stretch {
+	margin-right: -53px;
+}
+div.due {
+	display: inline-block;
+	width: 33.3%;
+}
+div.modal select {
+	display: inline-block;
+	width: 80%;
+	box-sizing: border-box;
+}
+div.modal p {
+	display: inline-block;
+	width: 15%;
+	padding-left: 3%;
+	box-sizing: border-box;
+}
+div.modal textarea {
+	width: 100%;
+	height: 145px;
+	resize: none;
+}
+input[type="submit"] {
+	margin: -5px 22px 0 105px;
+	color: #fff;
+	border: none;
+	border-radius: 3px;
+	width: 185px;
+	height: 35px;
+	background: #148fd5;
+	position: relative;
+	bottom: 7px;
+}
+input[type="submit"] + input[type="submit"] {
+	margin: 0;
+}
+#item_1:checked + label + div {
+
+	background: white;
+	width: 575px;
+	height: 400px;
+	position: fixed;
+	left: 35.5%;
+	top: 23%;
+	z-index: 10;
+}
+#item_1:checked + label:before {
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	content: "";
+	background: rgba(0, 0, 0, .4)
+
+}
+
+/*
+******************************
+main
+******************************
+*/
+div.container {
+	overflow: auto;
+}
+main {
+	margin: 46px 100px 0 20px;
+}
+/*
+******************************
+main header
+******************************
+*/
+
+main header {
+	padding-left: 12px;
+	margin: 32px 0 20px 0;
+}
+main header dt {
+	padding-right: 10px;
+}
+main header dt,
+main header dd {
+	display: inline-block;
+}
+main header dt {
+	font-size: 21px;
+}
+main header dd {
+		color: #fff;
+		font-size: 14px;
+		background: #148fd5;
+		padding: 1px 5px;
+		border-radius: 13px;
+		position: relative;
+		bottom: 3px;
+}
+/*
+******************************
+main form
+******************************
+*/
+main {
+	background: #fff;
+	overflow: auto;
+}
+
+main label {
+	color: #060606;
+}
+
+main a,
+div.container main label:hover {
+	color: #148fd5;
+	cursor: pointer;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+th {
+	text-align: left;
+	line-height: 48px;
+}
+td {
+	border-top: 1px solid #e7e7e7;
+	line-height: 49px;
+}
+td:first-of-type,
+th:first-of-type {
+	padding-left: 12px;
+	width: 40px;
+}
+td:last-of-type {
+	text-align: right;
+}
+
+input[type="checkbox"] {
+	display: none;
+
+}
+input[type="checkbox"]:checked + label {
+	text-decoration: line-through;
+	color: #b3b3b3;
+}
+
+@media (max-width: 768px) {
+	body > header {
+		display: none;
+	}
+	main {
+		margin-left: 20px;
+	}
+	body > label {
+		display: block;
+	}
+	#toggle_header:checked + label {
+		left: 355px;
+	}
+	#toggle_header:checked + label + header {
+		display: block;
+	}
+}

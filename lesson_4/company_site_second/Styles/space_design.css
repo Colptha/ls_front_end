@@ -19,9 +19,6 @@ body {
 HEADER
 ------------------------------------------
 */
-header {
-
-}
 header h1 {
 	margin: 0 0 115px 0;
 }
@@ -30,6 +27,7 @@ header h1 a {
 	width: 298px;
 	height: 243px;
 	text-indent: -9999px;
+	overflow: hidden;
 	background: transparent url("../images/logo.png") 0 0 no-repeat;
 }
 nav {

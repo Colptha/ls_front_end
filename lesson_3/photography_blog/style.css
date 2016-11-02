@@ -12,6 +12,9 @@ header, main, footer {
   margin: 0 auto;
   overflow: auto;
 }
+
+/*-----header-----*/
+
 header {
   padding: 20px 20px 0 20px;
 }
@@ -41,9 +44,12 @@ nav a.active {
   color: #fcfff5;
   background-color: #91aa9d;
 }
+
+/*-----main-----*/
+
 main {
   background-color: #fff;
-  padding: 30px 30px;
+  padding: 30px;
   box-shadow: 0 5px 5px #b5b5b5;
 }
 img.masthead {
